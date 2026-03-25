@@ -7,7 +7,7 @@ output reg [7:0] instruction_out
 
 
     );
-always @(posedge clk)
+    always @(posedge clk or posedge reset)
 begin
 if(reset)
 instruction_out <= 8'd0;
