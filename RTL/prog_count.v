@@ -2,7 +2,7 @@ module prog_count(
     input clk,
     input reset,
     output reg [7:0] pc);
-always @(posedge clk)
+    always @(posedge clk or posedge reset)
 begin
     if(reset)
         pc <= 8'd0;
